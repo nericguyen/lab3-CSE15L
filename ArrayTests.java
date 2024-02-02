@@ -28,4 +28,10 @@ public class ArrayTests {
     ArrayExamples.reverseInPlace(oneToTen);
     assertArrayEquals(new int[]{ 10,9,8,7,6,5,4,3,2,1 }, oneToTen);
   }
+
+  @Test
+  public void testAverageWithoutLowestWithDuplicateLowest() {
+    double[] duplicateLowest = { 1,1,1,5,5,5 };
+    assertTrue(ArrayExamples.averageWithoutLowest(duplicateLowest) == 5.0);
+  }
 }

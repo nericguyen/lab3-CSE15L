@@ -21,7 +21,7 @@ public class ArrayExamples {
     }
     return newArray;
   }
-r
+
   // Averages the numbers in the array (takes the mean), but leaves out the
   // lowest number when calculating. Returns 0 if there are no elements or just
   // 1 element in the array
@@ -32,10 +32,14 @@ r
       if(num < lowest) { lowest = num; }
     }
     double sum = 0;
+    int numOfLowest = 0;
     for(double num: arr) {
-      if(num != lowest) { sum += num; }
+      if(num != lowest) { 
+        sum += num; 
+        numOfLowest ++;
+      }
     }
-    return sum / (arr.length - 1);
+    return sum / (arr.length - numOfLowest);
   }
 
 
